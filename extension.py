@@ -112,17 +112,17 @@ def render_up_down(index):
 def render_item_long(_, r):
     style = ""
     if r == current_selected:
-        style += "background-color:grey"
-    return "<a style='text-decoration: none;display: block;line-height: 18px;" + style + "' href='long:" + \
-        _[1]+"'>"+_[0]+"<i style='padding-left:10px;font-size: 12px;color: #FFF;position: relative;margin-left: 220%;display: block;top: -20px;margin-bottom: -18px;'>" + \
+        style += "background-color:rgba(255, 255, 255, .1);"
+    return "<a style='text-decoration: none;padding: 4px 0;display: block;line-height: 18px;" + style + "' href='long:" + \
+        _[1]+"'>"+_[0]+"<i style='padding-left:10px;font-size: 12px;color: #FFF;position: relative;margin-left: 225%;display: block;top: -20px;margin-bottom: -18px;'>" + \
         render_up_down(r) + "</i></a>"
 
 
 def render_item_short(_, r):
     style = ""
     if r == current_selected:
-        style += "background-color:grey;"
-    return "<a style='text-decoration: none;display: block;line-height: 18px;" + style + "' href='sort:"+_[1][len(current_filter):]+"'>" + _[1] + "<i style='padding-left:10px;font-size: 12px;color: #FFF;display: block;position: relative;margin-left: 220%;top: -20px;margin-bottom: -18px;'>" + render_up_down(r) + "</i></a>"
+        style += "background-color:rgba(255, 255, 255, .1);"
+    return "<a style='text-decoration: none;padding: 4px 0;display: block;line-height: 18px;" + style + "' href='sort:"+_[1][len(current_filter):]+"'>" + _[1] + "<i style='padding-left:10px;font-size: 12px;color: #FFF;display: block;position: relative;margin-left: 225%;top: -20px;margin-bottom: -18px;'>" + render_up_down(r) + "</i></a>"
 
 
 def render_to_html(lang_util, r, filter_text="", selected=0, move_only=False, current=''):
