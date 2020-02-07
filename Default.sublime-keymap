@@ -1,0 +1,11 @@
+[
+    { "keys": ["enter"], "command": "aix_confirm", "args": {"index": -1}, "context": [
+        {"key": "setting.aiXcoder.internal_list_shown", "operator": "equal", "operand": true}
+    ]},
+    { "keys": ["up"], "command": "aix_move", "args": {"direction": "up"}, "context": [
+        {"key": "setting.aiXcoder.internal_list_shown", "operator": "equal", "operand": true}
+    ]},
+    { "keys": ["down"], "command": "aix_move", "args": {"direction": "down"}, "context": [
+        {"key": "setting.aiXcoder.internal_list_shown", "operator": "equal", "operand": true}
+    ]}
+]
